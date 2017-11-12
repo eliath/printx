@@ -6,5 +6,23 @@
   "repository": "git@github.com:eliath/printx.git",
   "author": "Elias Martinez Cohen <eliasmartinezcohen@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "colors": "^1.1.2"
+  },
+  "devDependencies": {
+    "eslint-config-eliath": "*"
+  },
+  "eslintConfig": {
+    "extends": "eliath",
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": "off"
+    }
+  }
 }
