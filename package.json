@@ -8,13 +8,16 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "test": "yarn lint && node tests",
     "lint": "eslint ."
   },
   "dependencies": {
     "colors": "^1.1.2"
   },
   "devDependencies": {
-    "eslint-config-eliath": "*"
+    "eslint-config-eliath": "*",
+    "intercept-stdout": "^0.1.2",
+    "tape": "^4.8.0"
   },
   "eslintConfig": {
     "extends": "eliath",

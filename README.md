@@ -1,6 +1,6 @@
 # printx
 
-Simple, opinionated print tools
+Simple, opinionated print tools for node.js
 
 ## Installation
 
