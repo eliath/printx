@@ -8,11 +8,14 @@ Simple, opinionated print tools for node.js
 
 ## API
 
+### General usage:
+
     import printx from 'printx'
 
     printx.info('Hello', 'World')
     // stdout: "[INFO] Hello World"
 
+### Available functions:
 
 | function | description | example out |
 | -------- | ----------- | ----------- |
