@@ -4,7 +4,7 @@ Simple, opinionated print tools for node.js
 
 ## Installation
 
-    $ npm install printx
+    $ yarn install printx
 
 ## API
 
