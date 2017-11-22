@@ -1,4 +1,4 @@
-require('colors')
+const col = require('chalk')
 const xprint = require('.')
 const test = require('tape')
 const listen = require('intercept-stdout')
@@ -10,7 +10,7 @@ test('info', t => {
   })
   xprint.info('test', 'foo', 'bar')
   unlisten()
-  t.equal(result, `${'[INFO]'.blue} test foo bar\n`)
+  t.equal(result, `${col.blue('[INFO]')} test foo bar\n`)
   t.end()
 })
 
@@ -21,7 +21,7 @@ test('notify', t => {
   })
   xprint.notify('test', 'foo', 'bar')
   unlisten()
-  t.equal(result, `${'> test foo bar'.green}\n`)
+  t.equal(result, `${col.green('> test foo bar')}\n`)
   t.end()
 })
 
@@ -32,7 +32,7 @@ test('warn', t => {
   })
   xprint.warn('test', 'foo', 'bar')
   unlisten()
-  t.equal(result, `${'[WARN]'.yellow} test foo bar\n`)
+  t.equal(result, `${col.yellow('[WARN]')} test foo bar\n`)
   t.end()
 })
 
@@ -43,7 +43,7 @@ test('error', t => {
   })
   xprint.error('test', 'foo', 'bar')
   unlisten()
-  t.equal(result, `${'[ERROR]'.red} test foo bar\n`)
+  t.equal(result, `${col.red('[ERROR]')} test foo bar\n`)
   t.end()
 })
 
@@ -55,7 +55,7 @@ test('date', t => {
   xprint.date('test', 'foo', 'bar')
   const dateStr = (new Date()).toLocaleString(undefined, { hour12: false })
   unlisten()
-  t.equal(result, `${`[${dateStr}]`.bold} test foo bar\n`)
+  t.equal(result, `${col.bold(`[${dateStr}]`)} test foo bar\n`)
   t.end()
 })
 
@@ -78,7 +78,7 @@ test('label', t => {
   })
   xprint.label('test', 'foo', 'bar')
   unlisten()
-  t.equal(result, `${'test'.bold}:\t foo bar\n`)
+  t.equal(result, `${col.bold('test')}:\t foo bar\n`)
   t.end()
 })
 

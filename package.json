@@ -12,7 +12,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "colors": "^1.1.2"
+    "chalk": "*"
   },
   "devDependencies": {
     "eslint-config-eliath": "*",

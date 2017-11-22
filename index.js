@@ -1,34 +1,34 @@
-require('colors')
+const col = require('chalk')
 
 const p = console.log
 
 exports.info = function(...args) {
-  p('[INFO]'.blue, ...args)
+  p(col.blue('[INFO]'), ...args)
 }
 
 exports.notify = function(...args) {
-  p(`> ${args.join(' ')}`.green)
+  p(col.green(`> ${args.join(' ')}`))
 }
 
 exports.warn = function(...args) {
-  p('[WARN]'.yellow, ...args)
+  p(col.yellow('[WARN]'), ...args)
 }
 
 exports.error = function(...args) {
-  console.error('[ERROR]'.red, ...args)
+  console.error(col.red('[ERROR]'), ...args)
 }
 
 exports.label = function(l, ...args) {
-  p(`${l.bold}:\t`, ...args)
+  p(`${col.bold(l)}:\t`, ...args)
 }
 
 exports.date = function(...args) {
   const dateString = (new Date()).toLocaleString(undefined, { hour12: false })
-  p(`[${dateString}]`.bold, ...args)
+  p(col.bold(`[${dateString}]`), ...args)
 }
 
 exports.time = function(...args) {
-  p(`[${Date.now()}]`.bold, ...args)
+  p(col.bold(`[${Date.now()}]`), ...args)
 }
 
 exports.status = function(pct) {
