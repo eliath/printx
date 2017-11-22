@@ -1,6 +1,6 @@
 {
   "name": "printx",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Simple, opinionated print tools",
   "main": "index.js",
   "repository": "git@github.com:eliath/printx.git",
