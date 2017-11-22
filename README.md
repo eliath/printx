@@ -1,6 +1,9 @@
 # printx
 
-Simple, opinionated print tools for node.js
+Simple print toolbox for node.js.
+
+Colors are provided via the `chalk` module, which should be safe for
+screens without color support.
 
 ## Installation
 
