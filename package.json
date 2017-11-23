@@ -1,12 +1,26 @@
 {
   "name": "printx",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Simple, opinionated print tools",
   "main": "index.js",
   "repository": "git@github.com:eliath/printx.git",
   "author": "Elias Martinez Cohen <eliasmartinezcohen@gmail.com>",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "print",
+    "tool",
+    "tools",
+    "toolbox",
+    "utility",
+    "colorized",
+    "logger",
+    "lightweight",
+    "simple",
+    "compatible",
+    "colors",
+    "console"
+  ],
   "scripts": {
     "test": "yarn lint && node tests",
     "lint": "eslint ."
